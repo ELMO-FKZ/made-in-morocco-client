@@ -1,34 +1,43 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { lazy, Suspense } from "react"
+import { BrowserRouter, Routes, Route } from "react-router-dom"
+const Home = lazy(() => import("./pages/home/Home"))
+const Shop = lazy(() => import("./pages/shop/Shop"))
+const Category = lazy(() => import("./pages/shop/Category"))
+const Contact = lazy(() => import("./pages/contact/Contact"))
+const About = lazy(() => import("./pages/about/About"))
+const NotFound = lazy(() => import("./pages/notFound/NotFound"))
+const Layout = lazy(() => import("./components/layout/Layout"))
+const Privacy = lazy(() => import("./pages/privacy/Privacy"))
+const Returns = lazy(() => import("./pages/returns/Returns"))
+const ProductDetails = lazy(() => import("./pages/productDetails/ProductDetails"))
+const Cart = lazy(() => import("./pages/cart/Cart"))
+const Success = lazy(() => import("./pages/success/Success"))
+const Cancel = lazy(() => import("./pages/cancel/Cancel"))
+
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
+    <Suspense fallback={<div className="loader-container"><div className="loader"></div></div>}>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Layout />}>
+            <Route index element={<Home />} />
+            <Route path="cart" element={<Cart />} />
+            <Route path="products/:category/:id" element={<ProductDetails />} />
+            <Route path="products" element={<Shop />} />
+            <Route path="products/:category" element={<Category />} />
+            <Route path="contact" element={<Contact />} />
+            <Route path="about" element={<About />} />
+            <Route path="privacy-policy" element={<Privacy />} />
+            <Route path="shipping-returns" element={<Returns />} />
+            <Route path="success" element={<Success />} />
+            <Route path="cancel" element={<Cancel />} />
+          </Route>
+          <Route path="*" element={<NotFound />} />
+        </Routes>
+      </BrowserRouter>
+    </Suspense>
   )
 }
 
