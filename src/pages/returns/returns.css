@@ -1,0 +1,18 @@
+.shipping {
+margin-top: 14rem; }
+    .division:not(:first-child) {
+    margin-top: 3rem; }
+    .division--padtop {
+    padding-top: 3rem; }
+        .division__title {
+        color: var(--primary-color); }
+        .division__para {
+        text-align: justify; }
+        .division__para:not(:last-child) {
+        margin-bottom: 2rem; }
+        .division__para--pad {
+        padding-left: 2rem; }
+        .division__exp {
+        font-weight: 600; }
+.returns {
+margin-top: var(--section-margin-top); }
