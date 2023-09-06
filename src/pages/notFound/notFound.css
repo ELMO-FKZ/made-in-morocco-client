@@ -1,0 +1,20 @@
+.notFound {
+display: flex;
+justify-content: center;
+align-items: center;
+min-height: 100vh;
+text-align: center; }
+    .notFound__title {
+    color: var(--primary-color);
+    font-size: 4.2rem;
+    margin: 0; }
+    .notFound__para {
+    margin-bottom: 3rem; }
+    .notFound__link{
+    color: var(--background-color);
+    border: 2px solid var(--primary-color);
+    background-color: var(--primary-color); }
+    .notFound__link:hover{
+    color: var(--sm-text-color);
+    border: 2px solid var(--yellow-color);
+    background-color: var(--yellow-color); }
