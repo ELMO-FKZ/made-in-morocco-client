@@ -1,0 +1,81 @@
+.header {
+position: fixed;
+width: 100%;
+top: 0;
+left: 0;
+background-color: var(--secondary-color);
+border-bottom: 1px solid rgb(232, 232, 232);
+z-index: 100; }
+    .nav {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center; 
+    padding-block: 1rem; }
+        .nav__logo a {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        height: 4rem; }
+            .nav__logo-img {
+            height: 100%; }
+            @media (max-width: 24.9375em) {
+            .nav__logo-texts {display: none;} }
+                .nav__logo-text {
+                color: var(--primary-color);
+                font-weight: 600;
+                font-size: 1.4rem; }
+                .nav__logo-subtext {
+                font-size: 1.2rem; }
+        .nav__humberger {
+        cursor: pointer;
+        position: relative;
+        z-index: 140; }
+            .nav__open,
+            .nav__close {
+            font-size: 2.5rem;
+            color: var(--primary-color); }
+            .nav__open--hide,
+            .nav__close--hide {
+            display: none; }
+        .nav__overlay {
+        display: none; } 
+        .nav__overlay--show {
+        position: fixed;
+        z-index: 110;
+        top: 0;
+        left: 0;
+        display: block;
+        width: 100vw;
+        height: 100vh;
+        background-color: var(--overlay-color); }
+        @media (min-width: 48em) {
+        .nav__humberger { display: none;} }
+        .nav__menu {
+        display: flex;
+        gap: 4rem; }
+        @media (max-width: 47.9375em) {
+        .nav__menu {display: none;}
+        .nav__menu--show { 
+        display: flex;
+        flex-direction: column;
+        gap: 0;
+        position: absolute;
+        padding-top: 14rem;
+        top: 0;
+        right: 0;
+        z-index: 120;
+        min-height: 100vh;
+        min-width: 27rem;
+        background-color: var(--secondary-color); } }
+                .nav__link {text-transform: uppercase;}
+                .nav__link--active {
+                color: var(--primary-color);
+                font-weight: 500; }
+                @media (max-width: 47.9375em) {
+                .nav__link {
+                display: inline-block;
+                padding: 3rem; 
+                width: 100%;}
+                .nav__link--active {
+                background-color: var(--yellow-color); }}
