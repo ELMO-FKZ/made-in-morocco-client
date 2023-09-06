@@ -1,0 +1,43 @@
+.backdrop {
+position: fixed;
+z-index: 200;
+display: grid;
+place-items: center;
+top: 0;
+left: 0;
+width: 100vw;
+height: 100vh;
+background-color: var(--overlay-color);
+transition: all 0.3s ease-in-out;
+animation: fadeInBackdrop 0.3s ease-in-out; }
+@keyframes fadeInBackdrop {
+    0% { opacity: 0 }
+    100% { opacity: 1 }}
+.backdrop--hide {
+display: none; }
+    .modal {
+    position: relative;
+    text-align: center;
+    z-index: 300;
+    padding: 6rem 2rem;
+    margin: 1.5rem;
+    background-color: var(--yellow-color);
+    box-shadow: var(--shadow-color) 0px 10px 30px -20px;
+    border-radius: 4px;
+    transition: all 0.3s ease-in-out;
+    animation: fadeInModal 0.3s ease-in-out; }
+    @keyframes fadeInModal {
+        0% { opacity: 0; transform: scale(0.9)}
+        100% { opacity: 1; transform: scale(1)}}
+        .modal__icon {
+        font-size: 4rem;
+        color: var(--green-color); }
+        .modal__heading {
+        color: var(--primary-color); }
+        .modal__btn {
+        background-color: var(--yellow-color);
+        color: var(--sm-text-color);
+        position: absolute;
+        font-size: 3rem;
+        top: 2rem;
+        right: 2rem; }
