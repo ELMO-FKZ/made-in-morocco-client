@@ -1,0 +1,52 @@
+.cart {
+margin-top: 14rem;
+min-height: calc(100vh - 32rem); }
+    .cart__wrapper {
+    padding-top: 3rem; }
+        .cart__list-items {
+        width: 100%;
+        border-collapse: collapse; }
+                    .cart__head-items {
+                    text-align: left;
+                    padding: 1rem;
+                    border-bottom: solid 1px var(--thumb-color); }
+                    @media (max-width: 47.9375em) { 
+                    .cart__head-items:nth-child(3), 
+                    .cart-item__td:nth-child(3),
+                    .cart-foot__td:nth-child(3) {
+                    display: none; } } 
+                    .cart-item__td:not(:last-child) {
+                    padding-inline: 1rem; }
+                    @media (max-width: 31.9375em) { 
+                    .cart__head-items:nth-child(2), 
+                    .cart-item__td:nth-child(2),
+                    .cart-foot__td:nth-child(2) {
+                    display: none; } } 
+                    .cart-item__td:nth-child(1) {
+                    width: 10rem; }
+                        .cart-item__img {
+                        width: 100%;
+                        height: auto;
+                        display: block }
+
+                        @media (min-width: 48em) { 
+                        .cart-item__price {
+                        display: none; } }  
+
+                        .cart-item__valbtn:not(:last-of-type) {
+                        margin-right: 1rem; }
+                        .cart-item__valbtn {
+                        background-color: var(--secondary-color);
+                        padding: 0.3rem; }
+                        .cart-item__val {
+                        margin-right: 1rem; }
+            .cart__body {
+            border-bottom: solid 1px var(--thumb-color); }
+                    .cart-foot__td {
+                    padding: 1rem;
+                    font-weight: 700; }
+                    .cart-foot__td--grey {
+                    background-color: var(--secondary-color); }
+        .cart-action {
+        margin-top: 4rem;
+        text-align: right; }
