@@ -1,0 +1,21 @@
+.special-heading {
+position: relative;
+margin-bottom: 4rem;
+color: var(--primary-color);
+text-align: center;
+z-index: 1; }
+    .special-title {
+    display: inline-block;
+    position: relative; }
+    .special-title::first-letter {
+    font-size: 4rem; }
+    .special-title::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 3rem;
+    width: 3rem;
+    background-color: var(--yellow-color);
+    transform: translate(-50%, -25%);
+    z-index: -1; }
