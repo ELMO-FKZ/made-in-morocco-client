@@ -1,0 +1,22 @@
+.services {
+display: grid;
+grid-template-columns: repeat(2, 1fr); 
+gap: 3rem 2rem;
+padding-block: 3rem;
+background-color: var(--secondary-color); }
+@media (max-width: 30em) { 
+.services {
+grid-template-columns: repeat(1, 1fr);; } }
+@media (min-width: 75em) { 
+.services {
+grid-template-columns: repeat(4, 1fr); } }
+    .service {
+    text-align: center; }
+        .service svg {
+        color: var(--primary-color);
+        font-size: 3rem;
+        margin-bottom: 2rem; }
+        .service__title {
+        color: var(--primary-color);
+        font-size: 1.8rem;
+        margin-bottom: 1rem; }
