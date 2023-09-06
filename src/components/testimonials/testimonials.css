@@ -1,0 +1,64 @@
+.testimonials {
+margin-top: var(--section-margin-top); }
+    .testimonials__box { position: relative;}
+        .testimonials__container {
+        position: relative;
+        display: flex;
+        overflow: hidden;
+        margin-inline: auto;
+        max-width: 50rem; }
+            .testimonials__item {
+            text-align: center; 
+            display: none;
+            transition: all var(--main-duration) linear;}
+            .testimonials__item--activeItem {
+            display: block; }   
+                .testimonials__image {
+                display: inline-block;
+                height: 10rem;
+                width: 10rem;
+                border-radius: 50%;
+                margin-bottom: 1rem;
+                background-color: var(--secondary-color); }
+                    .testimonials__img {
+                    display: block;
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover; }
+                .testimonials__name {
+                margin-bottom: 1rem;
+                font-weight: 500; }
+                .testimonials__country {
+                color: var(--primary-color);
+                margin-bottom: 2rem;
+                font-weight: 500; }
+                .testimonials__text {
+                max-width: 50rem; }
+        .testimonials__dots {
+        margin-top: 2rem;
+        text-align: center; }
+            .testimonials__dot {
+            display: inline-block;
+            width: 1rem;
+            height: 1rem;
+            border-radius: 50%;
+            border: 1px var(--primary-color) solid;
+            background-color: var(--secondary-color); }
+            .testimonials__dot:not(:last-child) {
+            margin-right: 1rem; }
+            .testimonials__dot--active {
+            background-color: var(--primary-color); }
+        .testimonials__left {
+        background-color: transparent;
+        position: absolute;
+        left: 50%;
+        top: 2rem;
+        transform: translate(calc(-50% - 8rem), 0); }
+        .testimonials__right {
+        background-color: transparent;
+        position: absolute;
+        left: 50%;
+        top: 2rem;
+        transform: translate(calc(-50% + 8rem), 0); }
+            .testimonials__icon {
+            font-size: 6rem; }
