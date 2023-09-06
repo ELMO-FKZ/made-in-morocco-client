@@ -1,0 +1,12 @@
+.privacy {
+margin-top: 14rem; }
+    .privacy__division {
+    margin-top: 3rem; }
+        .privacy__title {
+        color: var(--primary-color); }
+        .privacy__para {
+        text-align: justify; }
+        .privacy__para--padtop {
+        padding-top: 3rem; }
+        .privacy__para--padleft {
+        padding-left: 2rem; }
