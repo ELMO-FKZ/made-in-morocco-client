@@ -1,0 +1,10 @@
+.about{
+margin-top: 14rem; }
+    .about__para {
+    text-align: justify; }
+    .about__para:first-of-type {
+    padding-top: 3rem; }
+    .about__para:not(:last-child) {
+    margin-bottom: 2rem; }
+        .about__exp {
+        font-weight: 600; }
