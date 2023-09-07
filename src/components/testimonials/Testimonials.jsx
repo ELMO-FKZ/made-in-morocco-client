@@ -1,6 +1,6 @@
 import { useState, memo, useCallback } from "react"
 import SpecialHeading from "../specialHeading/SpecialHeading"
-import testimonials from "../../Data/testimonials"
+import testimonials from "../../data/testimonials"
 import Testimonial from "./Testimonial"
 import { BiChevronLeft, BiChevronRight } from "react-icons/bi"
 import "./testimonials.css"

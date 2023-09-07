@@ -1,7 +1,7 @@
 import { useState } from "react"
 import ProductItem from "../../components/productItem/ProductItem"
 import SpecialHeading from "../../components/specialHeading/SpecialHeading"
-import subNavLinks from "../../Data/subNavLinks"
+import subNavLinks from "../../data/subNavLinks"
 import useFetch from "../../hooks/useFecth"
 import "./shop.css"
 

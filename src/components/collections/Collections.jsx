@@ -2,7 +2,7 @@ import { useRef, memo } from "react"
 import { Link as LinkRouter } from "react-router-dom"
 import { BiChevronLeft, BiChevronRight } from "react-icons/bi"
 import SpecialHeading from "../specialHeading/SpecialHeading"
-import collections from "../../Data/collections"
+import collections from "../../data/collections"
 import "./collections.css"
 
 const Collections = memo(function Collections() {

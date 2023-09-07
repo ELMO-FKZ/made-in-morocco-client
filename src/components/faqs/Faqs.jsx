@@ -1,6 +1,6 @@
 import { memo } from "react"
 import SpecialHeading from "../specialHeading/SpecialHeading"
-import faqs from "../../Data/faqs"
+import faqs from "../../data/faqs"
 import FaqsItem from "./FaqsItem"
 import "./faqs.css"
 

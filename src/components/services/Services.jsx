@@ -1,5 +1,5 @@
 import { memo } from "react"
-import services from "../../Data/services"
+import services from "../../data/services"
 import "./services.css"
 
 const Services = memo(function Services() {
