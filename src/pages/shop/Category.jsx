@@ -1,5 +1,5 @@
 import { useParams } from "react-router-dom"
-import ProductItem from "../../components/productItem/ProductItem"
+import ProductItem from "../../components/productItem/ProductItemm"
 import SpecialHeading from "../../components/specialHeading/SpecialHeading"
 import useFetch from "../../hooks/useFecth"
 import "./shop.css"

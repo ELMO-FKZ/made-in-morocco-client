@@ -1,5 +1,5 @@
 import { useState } from "react"
-import ProductItem from "../../components/productItem/ProductItem"
+import ProductItem from "../../components/productItem/ProductItemm"
 import SpecialHeading from "../../components/specialHeading/SpecialHeading"
 import subNavLinks from "../../data/subNavLinks"
 import useFetch from "../../hooks/useFecth"
