@@ -17,7 +17,7 @@ const ProductItem = memo(function ProductItem({ product, isSelected }) {
             initial={{scale: 0.95}}>
             <LinkRouter className="product-item__link" to={`/products/${product.category}/${product._id}`} >
             <div className="product-item__image">
-                <img className="product-item__img" src={product.image} alt={product.title} />
+                <img className="product-item__img" src={product.image} alt={product.title} loading="lazy" />
             </div>
             <div className="product-item__price">
                 <span className="product-item__new-price">${Math.round(product.price * (1 - product.promotion/100))}</span>

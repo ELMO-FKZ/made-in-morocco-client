@@ -32,7 +32,7 @@ const Contact = () => {
         e.preventDefault()
         try {
             if(Object.keys(errors).length === 0 && Object.keys(values).length !==0) {
-                const res = await fetch("http://localhost:8000/api/message", {
+                const res = await fetch(`${import.meta.env.VITE_REACT_APP_SERVER_URL}/api/message`, {
                     method: "POST",
                     headers: { "Content-Type": "application/json" },
                     body: JSON.stringify(values)

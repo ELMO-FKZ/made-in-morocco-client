@@ -11,7 +11,7 @@ const ProductDetails = () => {
     const {id} = useParams()
     const navigate = useNavigate()
     const {addToCart} = useContext(ShoppingContext)
-    const {products} = useFetch(`http://localhost:8000/api/products/${id}`) 
+    const {products} = useFetch(`${import.meta.env.VITE_REACT_APP_SERVER_URL}/api/products/${id}`) 
     const newPrice = Math.round(products?.price * (1 - products?.promotion/100))
 
     function goBack() {

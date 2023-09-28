@@ -1,6 +1,6 @@
-import person1 from "/assets/person1.webp"
-import person2 from "/assets/person2.webp"
-import person3 from "/assets/person3.webp"
+import person1 from "../assets/person1.webp"
+import person2 from "../assets/person2.webp"
+import person3 from "../assets/person3.webp"
 
 const testimonials = [
     {id: 1, picture: person1, name: "John Smith", country: "USA", testimonial: "I recently brought some items from Made In Morocco website. Their products were just as described with superb finishing. One of the best websites that sell Moroccan decor. Will be making more purchases :)"},

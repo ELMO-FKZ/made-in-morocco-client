@@ -12,7 +12,7 @@ const Cart = () => {
 
     const checkOut = async() => {
         try {
-            const res = await fetch("http://localhost:8000/api/checkout", {
+            const res = await fetch(`${import.meta.env.VITE_REACT_APP_SERVER_URL}/api/checkout`, {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json"

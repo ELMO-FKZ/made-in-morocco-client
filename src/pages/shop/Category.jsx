@@ -7,7 +7,7 @@ import "./shop.css"
 const Category = () => {
 
     const {category} = useParams()
-    const {products} = useFetch(`http://localhost:8000/api/products/category/${category}`) 
+    const {products} = useFetch(`${import.meta.env.VITE_REACT_APP_SERVER_URL}/api/products/category/${category}`) 
 
     return (
         <div className="shop container">

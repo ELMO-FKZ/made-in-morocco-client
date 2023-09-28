@@ -26,7 +26,7 @@ const Newsletter = memo(function Newsletter() {
         e.preventDefault()
         try {
             if(errors === "") {
-                const res = await fetch("http://localhost:8000/api/newsletter", {
+                const res = await fetch(`${import.meta.env.VITE_REACT_APP_SERVER_URL}/api/newsletter`, {
                     method: "POST",
                     headers: { "Content-Type": "application/json" },
                     body: JSON.stringify({ email: input})

@@ -7,7 +7,7 @@ import "./shop.css"
 
 const Shop = () => {
 
-    const {products} = useFetch(`http://localhost:8000/api/products`) 
+    const {products} = useFetch(`${import.meta.env.VITE_REACT_APP_SERVER_URL}/api/products`) 
     const [isSelected, setIsSelected] = useState("All")
 
     const handleSelectChange = (e) => {

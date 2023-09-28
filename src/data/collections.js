@@ -1,10 +1,10 @@
-import img1 from "/assets/lamps.webp"
-import img2 from "/assets/pottery.webp"
-import img3 from "/assets/pillow.webp"
-import img4 from "/assets/pouf.webp"
-import img5 from "/assets/carpet.webp"
-import img6 from "/assets/cosmetic.webp"
-import img7 from "/assets/tea.webp"
+import img1 from "../assets/lamps.webp"
+import img2 from "../assets/pottery.webp"
+import img3 from "../assets/pillow.webp"
+import img4 from "../assets/pouf.webp"
+import img5 from "../assets/carpet.webp"
+import img6 from "../assets/cosmetic.webp"
+import img7 from "../assets/tea.webp"
 
 const collections = [
     {id: 1, name: "Lanterns & Lamps", image: img1, path:"/shop/lanterns-lamps"},

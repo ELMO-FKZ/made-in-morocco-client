@@ -1,6 +1,6 @@
 import { useState, useEffect, memo } from "react"
 import { Link as LinkRouter, NavLink } from "react-router-dom"
-import logo from "/assets/logo.webp"
+import logo from "../../assets/logo.webp"
 import { FaBars, FaTimes } from "react-icons/fa"
 import navLinks from "../../data/navLinks"
 import useBodyOverflow from "../../hooks/useBodyOverflow"

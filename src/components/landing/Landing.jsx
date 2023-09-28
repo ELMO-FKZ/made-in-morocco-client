@@ -1,7 +1,7 @@
 import { memo } from "react"
 import { FaArrowRight } from "react-icons/fa"
 import { Link as LinkRouter } from "react-router-dom"
-import landingImg from "/assets/landing-img.webp"
+import landingImg from "../../assets/landing-img.webp"
 import "./landing.css"
 
 const Landing = memo(function Landing() {
