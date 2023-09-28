@@ -49,13 +49,14 @@ const Newsletter = memo(function Newsletter() {
             <form className="newsletter__form" method="" onSubmit={(e) => subscribeHandler(e)}>
                 <div className="newsletter__div" >
                     <input className="newsletter__input" 
+                        id="email"
                         ref={refEmail}
                         value={input}
                         onChange={handleChange}
                         type="email"  
                         placeholder="Enter your email"
                         required />
-                    <button className="newsletter__btn" type="submit">Subscribe</button>
+                    <button className="newsletter__btn" type="submit" id="submit" value="submit" name="Submit">Subscribe</button>
                     {errors && <div className="newsletter__form-error">{errors}</div>}
                 </div>
             </form>
