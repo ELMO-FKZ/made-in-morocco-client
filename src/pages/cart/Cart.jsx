@@ -17,7 +17,7 @@ const Cart = () => {
                 headers: {
                     "Content-Type": "application/json"
                 },
-                // mode: "cors",
+                mode: "cors",
                 body: JSON.stringify({
                     items: cartItems
                 })
