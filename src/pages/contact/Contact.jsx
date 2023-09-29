@@ -35,6 +35,7 @@ const Contact = () => {
                 const res = await fetch(`${import.meta.env.VITE_REACT_APP_SERVER_URL}/api/message`, {
                     method: "POST",
                     headers: { "Content-Type": "application/json" },
+                    mode: "cors",
                     body: JSON.stringify(values)
                 })
                 if(res.ok) {
