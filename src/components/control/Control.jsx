@@ -10,17 +10,17 @@ const Control = memo(function Control() {
     const [isPageOnScroll, setIsPageOnScroll] = useState(false)
 
     useEffect(() => {
-        function headerOnScroll() {
+        function handlePageOnScroll() {
             window.scrollY > "700" ? setIsPageOnScroll(true) : setIsPageOnScroll(false)
         }
-        window.addEventListener("scroll", headerOnScroll)
+        window.addEventListener("scroll", handlePageOnScroll)
         return () => {
-            window.removeEventListener("scroll", headerOnScroll)
+            window.removeEventListener("scroll", handlePageOnScroll)
         }
     }, [])
 
     const handleScrollToTop = () => {
-        window.scrollTo({ top: 0, behavior: 'smooth' })
+        window.scrollTo({ top: 0, behavior: "smooth" })
     }
     
     return (

@@ -5,22 +5,22 @@ import "./faqs.css"
 
 const FaqsItem = memo(function FaqsItem ({ question, answer}) {
 
-    const [isClicked, setIsClicked] = useState(false)
+    const [isExtended, setIsExtended] = useState(false)
 
-    function handleClick() {
-        setIsClicked(prevIsClicked => !prevIsClicked)
+    const handleExtend = () => {
+        setIsExtended(prevIsExtended => !prevIsExtended)
     }
 
     return (
         <div className='faqs__item'>
-            <p className={`faqs__question ${isClicked ? "faqs__question--clicked" : ""}`} onClick={handleClick}>
+            <p className="faqs__question" onClick={handleExtend}>
                 {question}
                 <span className='faqs__extend'>
-                    <BiPlus className={`faqs__icon ${isClicked ? "faqs__icon--hide" : ""}`} />
-                    <BiMinus className={`faqs__icon ${isClicked ? "" : "faqs__icon--hide"}`}/>
+                    <BiPlus className={`faqs__icon ${isExtended ? "faqs__icon--hide" : ""}`} />
+                    <BiMinus className={`faqs__icon ${isExtended ? "" : "faqs__icon--hide"}`}/>
                 </span>
             </p>
-            <p className={`faqs__answer ${isClicked ? "" : "faqs__answer--hide"}`}>
+            <p className={`faqs__answer ${isExtended ? "" : "faqs__answer--hide"}`}>
                 {answer}
             </p>
         </div>

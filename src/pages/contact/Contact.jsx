@@ -1,13 +1,13 @@
 import { useState, useContext, useRef } from "react"
-import SpecialHeading from "../../components/specialHeading/SpecialHeading"
 import { FaPaperPlane } from "react-icons/fa"
-import Modal from "../../components/modal/Modal"
 import { ModalContext } from "../../contexts/ModalContext"
 import { validateForm } from "../../utils/validateForm"
+import SpecialHeading from "../../components/specialHeading/SpecialHeading"
+import Modal from "../../components/modal/Modal"
 import useBodyOverflow from "../../hooks/useBodyOverflow"
 import "./contact.css"
 
-const Contact = () => {
+function Contact() {
 
     const initialValues = { name: "", email: "", message: ""}
     const [values, setValues] = useState(initialValues)
@@ -22,8 +22,7 @@ const Contact = () => {
 
     const handleChange = (e) => {
         e.persist()
-        let name = e.target.name
-        let value = e.target.value
+        const {name, value} = e.target
         validateForm(name, value, errors, setErrors, refName, refEmail, refMessage )
         setValues({...values, [name]:value})
     }
@@ -67,7 +66,7 @@ const Contact = () => {
                             type="text" 
                             placeholder="Enter your full name" 
                             name="name" 
-                            onChange={handleChange}
+                            onChange={(e) => handleChange(e)}
                             autoComplete="off"
                             required />
                         {errors.name && <span className="contact__form-error">{errors.name}</span>}
@@ -81,8 +80,8 @@ const Contact = () => {
                             type="email" 
                             placeholder="Enter your email" 
                             name="email"
-                            onChange={handleChange}
-                            autoComplete="off"
+                            onChange={(e) => handleChange(e)}
+                            autoComplete="on"
                             required />
                         {errors.email && <span className="contact__form-error">{errors.email}</span>}
                     </div>
@@ -95,7 +94,7 @@ const Contact = () => {
                             placeholder="Enter your message" 
                             rows="10" 
                             name="message"
-                            onChange={handleChange} 
+                            onChange={(e) => handleChange(e)}
                             autoComplete="off"
                             required>
                         </textarea>

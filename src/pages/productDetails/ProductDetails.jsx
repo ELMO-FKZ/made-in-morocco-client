@@ -6,7 +6,7 @@ import SpecialHeading from "../../components/specialHeading/SpecialHeading"
 import { FaCartPlus, FaArrowRight } from "react-icons/fa"
 import "./productDetails.css"
 
-const ProductDetails = () => {
+function ProductDetails() {
 
     const {id} = useParams()
     const navigate = useNavigate()
@@ -14,7 +14,7 @@ const ProductDetails = () => {
     const {products} = useFetch(`${import.meta.env.VITE_REACT_APP_SERVER_URL}/api/products/${id}`) 
     const newPrice = Math.round(products?.price * (1 - products?.promotion/100))
 
-    function goBack() {
+    const goBack = () => {
         navigate("/products")
     }
 

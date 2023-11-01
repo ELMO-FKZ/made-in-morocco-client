@@ -2,7 +2,7 @@ import { Link as LinkRouter} from "react-router-dom"
 import {FaTimesCircle} from "react-icons/fa"
 import "./cancel.css"
 
-const Cancel = () => {
+function Cancel() {
 
     return (
         <div className='cancel container'>

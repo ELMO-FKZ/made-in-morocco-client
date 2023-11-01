@@ -1,7 +1,7 @@
 import SpecialHeading from "../../components/specialHeading/SpecialHeading"
 import "./about.css"
 
-const About = () => {
+function About() {
 
     return (
         <div className="about container">

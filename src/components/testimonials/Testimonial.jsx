@@ -8,9 +8,15 @@ const Testimonial = memo(function Testimonial({ position, picture, name, country
             <div className="testimonials__image">
                 <img className="testimonials__img" src={picture} alt="reviewer picture" />
             </div>
-            <div className="testimonials__name">{name}</div>
-            <div className="testimonials__country">{country}</div>
-            <p className="testimonials__text">{testimonial}</p>
+            <div className="testimonials__name">
+                {name}
+            </div>
+            <div className="testimonials__country">
+                {country}
+            </div>
+            <p className="testimonials__text">
+                {testimonial}
+            </p>
         </div>
     )
 })

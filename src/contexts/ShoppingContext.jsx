@@ -15,9 +15,8 @@ export const ShoppingContextProvider = ({ children }) => {
         localStorage.setItem("cartItems", JSON.stringify(cartItems))
     }, [cartItems])
 
-    function addToCart(item) {
-        let productItem = cartItems.find(product => product._id === item._id)
-
+    const addToCart = (item) => {
+        const productItem = cartItems.find(product => product._id === item._id)
         if(productItem) {
             productItem.amount += 1
             setCartItems(prev => [...prev])
@@ -30,7 +29,7 @@ export const ShoppingContextProvider = ({ children }) => {
     }
 
     const increament = useCallback((item) => {
-        let productItem = cartItems.find(product => product._id === item._id)
+        const productItem = cartItems.find(product => product._id === item._id)
         if(productItem) {
             productItem.amount += 1
             setCartItems(prev => [...prev])
@@ -39,8 +38,7 @@ export const ShoppingContextProvider = ({ children }) => {
     }, [cartItems, toast])
 
     const decreament = useCallback((item) => {
-        let productItem = cartItems.find(product => product._id === item._id)
-
+        const productItem = cartItems.find(product => product._id === item._id)
         if(productItem) {
             productItem.amount -= 1
             if (productItem.amount === 0) {
@@ -54,8 +52,7 @@ export const ShoppingContextProvider = ({ children }) => {
     }, [cartItems, toast])
 
     const remove = useCallback((item) => {
-        let productItem = cartItems.find(product => product._id === item._id)
-
+        const productItem = cartItems.find(product => product._id === item._id)
         if(productItem) {
             setCartItems(cartItems.filter(product => product._id !== item._id))
             toast.remove("Your item has been removed")

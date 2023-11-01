@@ -8,16 +8,16 @@ export const ModalContextProvider = ({ children }) => {
     const [showModal, setShowModal] = useState(false)
     const [showMessage, setShowMessage] = useState("")
 
-    function closeModal () {
+    const closeModal = () => {
         setShowModal(false)
     }
 
-    function openModalContact() {
+    const openModalContact = () => {
         setShowMessage("Your message has been sent successfully.")
         setShowModal(true)
     }
 
-    function openModalNewsletter() {
+    const openModalNewsletter = () => {
         setShowMessage("We are so glad you have joined us.")
         setShowModal(true)
     }

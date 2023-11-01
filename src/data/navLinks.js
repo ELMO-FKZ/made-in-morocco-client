@@ -1,8 +1,8 @@
 const navLinks = [
-    {name:"home", path:"/"},
-    {name:"shop", path:"/products"},
-    {name:"about us", path:"/about"},
-    {name:"contact us", path:"/contact"}
+    {id: 1, name:"home", path:"/"},
+    {id: 2, name:"shop", path:"/products"},
+    {id: 3, name:"about us", path:"/about"},
+    {id: 4, name:"contact us", path:"/contact"}
 ]
 
 export default navLinks

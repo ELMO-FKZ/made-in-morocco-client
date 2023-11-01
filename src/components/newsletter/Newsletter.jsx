@@ -1,8 +1,8 @@
 import { useState, useContext, useRef, memo } from "react"
-import SpecialHeading from "../specialHeading/SpecialHeading"
-import Modal from "../modal/Modal"
 import { ModalContext } from "../../contexts/ModalContext"
 import { validateEmail } from "../../utils/validateEmail"
+import SpecialHeading from "../specialHeading/SpecialHeading"
+import Modal from "../modal/Modal"
 import useBodyOverflow from "../../hooks/useBodyOverflow"
 import "./newsletter.css"
 
@@ -17,7 +17,7 @@ const Newsletter = memo(function Newsletter() {
 
     const handleChange = (e) => {
         e.persist()
-        let value = e.target.value
+        const value = e.target.value
         validateEmail(value, refEmail, setErrors)
         setInput(value)
     }
@@ -53,6 +53,7 @@ const Newsletter = memo(function Newsletter() {
                         ref={refEmail}
                         value={input}
                         onChange={handleChange}
+                        autoComplete="on"
                         type="email"  
                         placeholder="Enter your email"
                         required />

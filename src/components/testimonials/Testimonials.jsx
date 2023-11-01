@@ -1,20 +1,23 @@
-import { useState, memo, useCallback } from "react"
+import { useState, useCallback, useEffect } from "react"
+import { BiChevronLeft, BiChevronRight } from "react-icons/bi"
 import SpecialHeading from "../specialHeading/SpecialHeading"
 import testimonials from "../../data/testimonials"
 import Testimonial from "./Testimonial"
-import { BiChevronLeft, BiChevronRight } from "react-icons/bi"
 import "./testimonials.css"
 
-const Testimonials = memo(function Testimonials() {
+function Testimonials() {
 
     const [people] = useState(testimonials)
     const [index, setIndex] = useState(0)
 
-    if (index < 0) {
-        setIndex(people.length - 1)
-    } else if (index > people.length - 1) {
-        setIndex(0)
-    }
+    useEffect(() => { 
+        if (index < 0) {
+            setIndex(people.length - 1)
+        } else if (index > people.length - 1) {
+            setIndex(0)
+        }
+    }, [index])
+
 
     const handleLeftClick = useCallback(() => {
         setIndex(index - 1)
@@ -52,11 +55,15 @@ const Testimonials = memo(function Testimonials() {
                         }) 
                     }
                     </div>
-                <button className="testimonials__left" onClick={handleLeftClick} aria-label="go left" ><BiChevronLeft className="testimonials__icon"/></button>
-                <button className="testimonials__right" onClick={handleRightClick} aria-label="go right" ><BiChevronRight className="testimonials__icon"/></button>
+                <button className="testimonials__left" onClick={handleLeftClick} aria-label="go left" >
+                    <BiChevronLeft className="testimonials__icon"/>
+                </button>
+                <button className="testimonials__right" onClick={handleRightClick} aria-label="go right" >
+                    <BiChevronRight className="testimonials__icon"/>
+                </button>
             </div>
         </div>
     )
-})
+}
 
 export default Testimonials

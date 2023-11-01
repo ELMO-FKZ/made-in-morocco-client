@@ -6,12 +6,12 @@ import { FaCartPlus } from "react-icons/fa"
 import PropTypes from "prop-types"
 import "./productItem.css"
 
-const ProductItem = memo(function ProductItem({ product, isSelected }) {
+const ProductItem = memo(function ProductItem({ product }) {
 
     const {addToCart} = useContext(ShoppingContext)
 
     return (
-        <motion.div className="product-item" style={{display: (isSelected === "All" || isSelected === product.category) ? "block" : 'none'}}
+        <motion.div className="product-item"
             whileInView={{scale: 1}}
             transition={{duration: 0.3, delay: 0.3}}
             initial={{scale: 0.95}}>
@@ -33,6 +33,5 @@ const ProductItem = memo(function ProductItem({ product, isSelected }) {
 export default ProductItem
 
 ProductItem.propTypes = {
-    product: PropTypes.any.isRequired,
-    isSelected: PropTypes.any.isRequired
+    product: PropTypes.object
 }

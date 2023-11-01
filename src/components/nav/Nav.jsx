@@ -1,30 +1,30 @@
 import { useState, useEffect, memo } from "react"
 import { Link as LinkRouter, NavLink } from "react-router-dom"
-import logo from "../../assets/logo.webp"
 import { FaBars, FaTimes } from "react-icons/fa"
+import logo from "../../assets/logo.webp"
 import navLinks from "../../data/navLinks"
 import useBodyOverflow from "../../hooks/useBodyOverflow"
 import "./nav.css"
 
 const Nav = memo(function Nav() {
 
-    const [isShown, setIsShown] = useState(false)
+    const [isMenuShown, setIsMenuShown] = useState(false)
 
-    useBodyOverflow(isShown)
+    useBodyOverflow(isMenuShown)
 
-    function handleClick() {
-        setIsShown(prevIsShown => !prevIsShown)
+    const handleClick = () => {
+        setIsMenuShown(prevIsMenuShown => !prevIsMenuShown)
     }
 
-    function handleEnter(e) {
+    const handleEnter = (e) => {
         if (e.keyCode === 13) {
-            setIsShown(prevIsShown => !prevIsShown)
+            setIsMenuShown(prevIsMenuShown => !prevIsMenuShown)
         }
     }
 
     useEffect(() => {
         function windowResize() {
-            setIsShown(false)
+            setIsMenuShown(false)
         }
         window.addEventListener("resize", windowResize)
         return () => {
@@ -45,16 +45,18 @@ const Nav = memo(function Nav() {
                     </LinkRouter>
                 </div>
                 <div className="nav__humberger" onClick={handleClick} onKeyDown={handleEnter} tabIndex={0}>
-                    <FaBars className={`nav__open ${isShown ? "nav__open--hide" : ""}`}/>
-                    <FaTimes className={`nav__close ${!isShown ? "nav__close--hide" : ""}`}/>
+                    <FaBars className={`nav__open ${isMenuShown ? "nav__open--hide" : ""}`}/>
+                    <FaTimes className={`nav__close ${!isMenuShown ? "nav__close--hide" : ""}`}/>
                 </div>
-                <div className={`nav__overlay ${isShown ? "nav__overlay--show" : ""}`} onClick={handleClick}></div>
-                <ul className={`nav__menu ${isShown ? "nav__menu--show" : ""}`}>
+                <div className={`nav__overlay ${isMenuShown ? "nav__overlay--show" : ""}`} onClick={handleClick}></div>
+                <ul className={`nav__menu ${isMenuShown ? "nav__menu--show" : ""}`}>
                     {
-                        navLinks.map((navLink, index) => {
+                        navLinks.map((navLink) => {
                             return (
-                                <li className="nav__list" key={index}>
-                                    <NavLink className={({isActive}) => (isActive ? "nav__link nav__link--active" : "nav__link")} to={navLink.path} onClick={()=>setIsShown(false)}>{navLink.name}</NavLink>
+                                <li className="nav__list" key={navLink.id}>
+                                    <NavLink className={({isActive}) => (isActive ? "nav__link nav__link--active" : "nav__link")} to={navLink.path} onClick={()=>setIsMenuShown(false)}>
+                                        {navLink.name}
+                                    </NavLink>
                                 </li>
                             )
                         })

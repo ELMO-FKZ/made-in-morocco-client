@@ -9,12 +9,12 @@ const Collections = memo(function Collections() {
 
     const carousel = useRef()
 
-    function handleLeftClick(e) {
+    const handleLeftClick = (e) => {
         e.preventDefault()
         carousel.current.scrollLeft -= carousel.current.offsetWidth
     }
 
-    function handleRightClick(e) {
+    const handleRightClick = (e) => {
         e.preventDefault()
         carousel.current.scrollLeft += carousel.current.offsetWidth
     }
@@ -22,8 +22,12 @@ const Collections = memo(function Collections() {
     return (
         <div className="collections container" >
             <SpecialHeading title="Collections" />
-            <button className="collections__btn" onClick={handleLeftClick} aria-label="go left" ><BiChevronLeft className="collections__chevron" /></button>
-            <button className="collections__btn" onClick={handleRightClick} aria-label="go right" ><BiChevronRight className="collections__chevron" /></button>
+            <button className="collections__btn" onClick={handleLeftClick} aria-label="go left" >
+                <BiChevronLeft className="collections__chevron" />
+            </button>
+            <button className="collections__btn" onClick={handleRightClick} aria-label="go right" >
+                <BiChevronRight className="collections__chevron" />
+            </button>
             <div className="collections__carousel" ref={carousel}>
                 {
                     collections.map((collection) => {

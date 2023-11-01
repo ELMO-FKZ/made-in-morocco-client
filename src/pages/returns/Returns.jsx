@@ -1,7 +1,7 @@
 import SpecialHeading from "../../components/specialHeading/SpecialHeading"
 import "./returns.css"
 
-const Returns = () => {
+function Returns() {
 
     return (
         <>

@@ -2,7 +2,7 @@ import { Link as LinkRouter} from "react-router-dom"
 import {FaArrowRight} from "react-icons/fa"
 import "./notFound.css"
 
-const Home = () => {
+function Home() {
 
     return (
         <div className="notFound">

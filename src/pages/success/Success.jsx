@@ -2,7 +2,7 @@ import { Link as LinkRouter} from "react-router-dom"
 import { FaCheckCircle } from "react-icons/fa"
 import "./success.css"
 
-const Success = () => {
+function Success() {
 
     return (
         <div className="success container">

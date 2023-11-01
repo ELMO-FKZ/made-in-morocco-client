@@ -5,7 +5,7 @@ import Faqs from "../../components/faqs/Faqs"
 import Testimonials from "../../components/testimonials/Testimonials"
 import Newsletter from "../../components/newsletter/Newsletter"
 
-const Home = () => {
+function Home() {
 
     return (
         <>

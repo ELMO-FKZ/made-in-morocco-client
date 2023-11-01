@@ -1,11 +1,11 @@
 import { useContext } from "react"
 import { Link as LinkRouter, useNavigate } from "react-router-dom"
 import { ShoppingContext } from "../../contexts/ShoppingContext"
-import SpecialHeading from "../../components/specialHeading/SpecialHeading"
 import { FaTrashAlt, FaPlus, FaMinus, FaArrowRight, FaMoneyCheckAlt, FaShoppingCart } from "react-icons/fa"
+import SpecialHeading from "../../components/specialHeading/SpecialHeading"
 import "./cart.css"
 
-const Cart = () => {
+function Cart() {
 
     const {cartItems, increament, decreament, remove} = useContext(ShoppingContext)
     const navigate = useNavigate()
@@ -29,7 +29,7 @@ const Cart = () => {
         }
     }
 
-    function goBack() {
+    const goBack = () => {
         navigate("/products")
     }
 
@@ -61,7 +61,7 @@ const Cart = () => {
                         <tbody className="cart__body">
                             {
                                 cartItems?.map(item => {
-                                    let price = Math.round(item.price * (1 - item.promotion/100))
+                                    const price = Math.round(item.price * (1 - item.promotion/100))
                                     return (
                                         <tr className="cart-item" key={item._id}>
                                             <td className="cart-item__td">
@@ -101,7 +101,7 @@ const Cart = () => {
                                 <td className="cart-foot__td cart-foot__td--grey">
                                     ${
                                         cartItems?.reduce((acc, item)=>{
-                                            let price = Math.round(item.price * (1 - item.promotion/100))
+                                            const price = Math.round(item.price * (1 - item.promotion/100))
                                             return acc += price * item.amount
                                         }, 0)
                                     }

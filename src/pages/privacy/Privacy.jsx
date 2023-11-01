@@ -1,7 +1,7 @@
 import SpecialHeading from "../../components/specialHeading/SpecialHeading"
 import "./privacy.css"
 
-const Privacy = () => {
+function Privacy() {
 
     return (
         <div className="privacy container">
