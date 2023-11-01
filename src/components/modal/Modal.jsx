@@ -9,7 +9,11 @@ const Modal = memo(function Modal() {
     const { showModal, showMessage, closeModal } = useContext(ModalContext)
 
     return (
-        <div className={`backdrop ${showModal ? "" : "backdrop--hide"}`} onClick={closeModal} >
+        <div className={`backdrop ${showModal ? "" : "backdrop--hide"}`} onClick={(e) => {
+            if (e.target === e.currentTarget) {
+                closeModal()
+            }
+        }} >
             <div className="modal" >
                 <div className="modal__text">
                     <h1 className="modal__heading">THANK YOU!</h1>
