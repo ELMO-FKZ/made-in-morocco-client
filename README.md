@@ -10,6 +10,7 @@ Made In Morocco is an e-commerce website that offers authentic handmade crafts m
 
  - [Description](#description)
  - [Demo](#demo)
+ - [Backend Repository](#backend-repository)
  - [Features](#features)
  - [Technologies](#technologies)
  - [License](#license)
@@ -30,7 +31,11 @@ Made In Morocco is an online platform that allows users to browse and purchase a
 
 ## Demo
 
-Here is a working live demo : https://made-in-morocco.onrender.com/
+Here is a working live demo : https://made-in-morocco.vercel.app
+
+## Backend Repository
+
+Here is the link to the backend repository : https://github.com/ELMO-FKZ/made-in-morocco-server
 
 
 ## Features
