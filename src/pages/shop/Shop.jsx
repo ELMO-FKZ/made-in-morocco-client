@@ -10,7 +10,7 @@ import "./shop.css"
 
 function Shop() {
 
-    const {products} = useFetch(`${import.meta.env.VITE_REACT_APP_SERVER_URL}/api/products`) 
+    const {products, loading} = useFetch(`${import.meta.env.VITE_REACT_APP_SERVER_URL}/api/products`) 
     const [sortCategory, setSortCategory] = useState("All")
     const [sortPrice, setSortPrice] = useState("Default")
     const [extend, setExtend] = useState({category: false, price: false})
@@ -84,6 +84,12 @@ function Shop() {
                     }
                 </div>
             </div>
+            <>
+            { loading ?
+            <div className="product-loading">
+                <div></div><div></div><div></div><div></div>
+            </div>
+            :
             <div className="product-list" >
                 {
                     products
@@ -101,6 +107,8 @@ function Shop() {
                     ))
                 }
             </div>
+            }
+            </>
         </div>
     )
 }

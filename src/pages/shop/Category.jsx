@@ -11,7 +11,7 @@ import "./shop.css"
 function Category() {
 
     const {category} = useParams()
-    const {products} = useFetch(`${import.meta.env.VITE_REACT_APP_SERVER_URL}/api/products/category/${category}`) 
+    const {products, loading} = useFetch(`${import.meta.env.VITE_REACT_APP_SERVER_URL}/api/products/category/${category}`) 
     const [sortPrice, setSortPrice] = useState("Default")
     const [extend, setExtend] = useState(false)
 
@@ -52,6 +52,12 @@ function Category() {
                     }
                 </div>
             </div>
+            <>
+            { loading ?
+            <div className="product-loading">
+                <div></div><div></div><div></div><div></div>
+            </div>
+            :
             <div className="product-list" >
             {
                 products
@@ -67,6 +73,8 @@ function Category() {
                 .map(product => <ProductItem key={product._id} product={product} />)
             }
             </div>
+            }
+            </>
         </div>
     )
 }
