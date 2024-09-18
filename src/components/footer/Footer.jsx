@@ -55,7 +55,7 @@ const Footer = memo(function Footer() {
             </div>
             <div className="footer__copyright">
                 <p>&copy; Copyright {currentYear}</p>
-                Designed & built by <a className="footer__copyright-owner" href="https://elmo.onrender.com" target="_blank" rel="noopener noreferrer">EL MOKHTAR FKHARZ</a>
+                Designed & built by <a className="footer__copyright-owner" href="https://elmo.onrender.com" target="_blank" rel="noopener noreferrer">ELMO</a>
             </div>
         </section>
     )
